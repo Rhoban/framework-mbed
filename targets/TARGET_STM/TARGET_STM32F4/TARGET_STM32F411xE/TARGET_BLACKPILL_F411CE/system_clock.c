@@ -55,8 +55,6 @@ uint8_t SetSysClock_PLL_HSI(void);
     * @retval None
     */
 
-extern int clock_source;
-
 void SetSysClock(void)
 {
 #if ((CLOCK_SOURCE) & USE_PLL_HSE_EXTC)
@@ -145,7 +143,6 @@ uint8_t SetSysClock_PLL_HSE(uint8_t bypass)
     //else
     //  HAL_RCC_MCOConfig(RCC_MCO1, RCC_MCO1SOURCE_HSE, RCC_MCODIV_1); // 8 MHz with external clock
 
-    clock_source = 1;
     return 1; // OK
 }
 #endif /* ((CLOCK_SOURCE) & USE_PLL_HSE_XTAL) || ((CLOCK_SOURCE) & USE_PLL_HSE_EXTC) */
@@ -197,7 +194,6 @@ uint8_t SetSysClock_PLL_HSI(void)
     /* Output clock on MCO1 pin(PA8) for debugging purpose */
     //HAL_RCC_MCOConfig(RCC_MCO1, RCC_MCO1SOURCE_HSI, RCC_MCODIV_1); // 16 MHz
 
-    clock_source = 2;
     return 1; // OK
 }
 #endif /* ((CLOCK_SOURCE) & USE_PLL_HSI) */
