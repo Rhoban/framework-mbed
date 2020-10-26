@@ -1650,7 +1650,8 @@
         ],
         "core": "Cortex-M4F",
         "macros_add": [
-            "STM32F411xE"
+            "STM32F411xE",
+            "HSE_VALUE=25000000"
         ],
         "extra_labels_add": [
             "STM32F4",
@@ -1665,7 +1666,7 @@
         "config": {
             "clock_source": {
                 "help": "Mask value : USE_PLL_HSE_EXTC | USE_PLL_HSE_XTAL (need HW patch) | USE_PLL_HSI",
-                "value": "USE_PLL_HSE_EXTC|USE_PLL_HSI",
+                "value": "USE_PLL_HSE_XTAL",
                 "macro_name": "CLOCK_SOURCE"
             }
         },
@@ -1687,7 +1688,8 @@
         ],
         "core": "Cortex-M4F",
         "macros_add": [
-            "STM32F401xE"
+            "STM32F401xE",
+            "HSE_VALUE=25000000"
         ],
         "extra_labels_add": [
             "STM32F4",
@@ -1702,7 +1704,7 @@
         "config": {
             "clock_source": {
                 "help": "Mask value : USE_PLL_HSE_EXTC | USE_PLL_HSE_XTAL (need HW patch) | USE_PLL_HSI",
-                "value": "USE_PLL_HSE_EXTC|USE_PLL_HSI",
+                "value": "USE_PLL_HSE_XTAL",
                 "macro_name": "CLOCK_SOURCE"
             }
         },
